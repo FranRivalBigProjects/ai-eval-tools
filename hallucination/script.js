@@ -1,0 +1,1 @@
+const res=document.getElementById('res');function run(){let f=(t.value.match(/maybe|unknown|uncertain/gi)||[]).length;res.innerText='Flags: '+f;}

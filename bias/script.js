@@ -1,0 +1,1 @@
+const res=document.getElementById('res');function run(){let f=(t.value.match(/always|never|all|none/gi)||[]).length;res.innerText='Bias signals: '+f;}

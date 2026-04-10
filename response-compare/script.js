@@ -1,0 +1,1 @@
+const res=document.getElementById('res');function run(){res.innerText=a.value.length>b.value.length?'A more detailed':'B more detailed';}

@@ -1,0 +1,1 @@
+const res=document.getElementById('res');function run(){res.innerText='Estimated accuracy: '+(100-Math.min(80,Math.floor(t.value.length/20)))+'%';}

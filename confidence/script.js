@@ -1,0 +1,1 @@
+const res=document.getElementById('res');function run(){res.innerText='Confidence: '+Math.min(100,Math.floor(t.value.length/15))+'%';}

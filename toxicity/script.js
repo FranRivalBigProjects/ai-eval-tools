@@ -1,0 +1,1 @@
+const res=document.getElementById('res');function run(){let f=(t.value.match(/hate|stupid|idiot|violence/gi)||[]).length;res.innerText='Toxicity flags: '+f;}
