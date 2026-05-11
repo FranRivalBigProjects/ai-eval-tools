@@ -11,11 +11,11 @@
 
 <meta name="description" content="Free tool with built-in templates for hallucination, toxicity, correctness, and bias evaluations of AI LLM outputs. Paste prompt + response to get instant evaluation scores. Plus a guide to the best tools to test safety and toxicity of LLM outputs.">
 
-<meta name="keywords" content="tools to test safety and toxicity of llm outputs, tool with built-in templates for hallucination toxicity correctness evaluations ai llm, llm output evaluation, ai safety evaluation tools, llm toxicity checker, hallucination detection ai, llm bias detection, ai evaluation metrics, llm output evaluator, ai response quality checker">
+<meta name="keywords" content="tools to test safety and toxicity of llm outputs, tool with built-in templates for hallucination toxicity correctness evaluations ai llm, llm output evaluation, ai safety evaluation tools, llm toxicity checker, hallucination detection ai, llm bias detection, ai evaluation metrics, llm output evaluator, ai response quality checker, llm evaluation templates, deepeval alternative browser">
 
 <link rel="canonical" href="https://franrivalbigprojects.github.io/ai-eval-tools/">
 
-<meta property="og:title" content="LLM Safety & Toxicity Evaluation Tool – Hallucination, Bias, Correctness Templates">
+<meta property="og:title" content="LLM Safety &amp; Toxicity Evaluation Tool – Hallucination, Bias, Correctness Templates">
 <meta property="og:description" content="Built-in templates for hallucination, toxicity, correctness, and bias evaluations of LLM outputs. Free, no login, instant results.">
 <meta property="og:type" content="website">
 
@@ -735,7 +735,7 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--text-dim); ma
 </script>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are the best tools to test safety and toxicity of LLM outputs?","acceptedAnswer":{"@type":"Answer","text":"The main tools to test LLM safety and toxicity: DeepEval (open source, Python, toxicity + hallucination metrics), Giskard (bias, toxicity, injection testing), PromptFoo (red-teaming, safety benchmarks), Azure AI Content Safety (cloud API), AWS Bedrock Guardrails (managed toxicity filter), Arize Phoenix (LLM observability), and this browser-based evaluator for quick no-install testing with built-in templates for hallucination, toxicity, correctness, and bias."}},{"@type":"Question","name":"How do you detect hallucinations in LLM outputs?","acceptedAnswer":{"@type":"Answer","text":"Hallucination detection methods: (1) Consistency checking — ask the same question multiple ways and compare answers. (2) Reference grounding — check if claims are supported by a provided context document. (3) Confidence signals — hedging phrases like 'I believe', 'I think', 'might be' indicate uncertainty. (4) Named entity verification — check if cited names, dates, and figures are verifiable. (5) Contradiction detection — check if the response contradicts the prompt or prior context. Tools like DeepEval and G-Eval use LLM-as-judge for reference-based hallucination scoring."}},{"@type":"Question","name":"What is the difference between toxicity and bias in LLM evaluation?","acceptedAnswer":{"@type":"Answer","text":"Toxicity measures harmful, offensive, or dangerous content in the LLM output — hate speech, threats, profanity, violent content. Bias measures unfair differential treatment of groups — demographic stereotyping, unequal representation, or discriminatory patterns. A response can be biased without being toxic (e.g. consistently associating certain groups with negative traits in neutral phrasing) or toxic without being biased (e.g. universally offensive content targeting all groups)."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are the best tools to test safety and toxicity of LLM outputs?","acceptedAnswer":{"@type":"Answer","text":"The main tools to test LLM safety and toxicity: DeepEval (open source, Python, toxicity + hallucination metrics), Giskard (bias, toxicity, injection testing), PromptFoo (red-teaming, safety benchmarks), Azure AI Content Safety (cloud API), AWS Bedrock Guardrails (managed toxicity filter), Arize Phoenix (LLM observability), and this browser-based evaluator for quick no-install testing with built-in templates for hallucination, toxicity, correctness, and bias."}},{"@type":"Question","name":"How do you detect hallucinations in LLM outputs?","acceptedAnswer":{"@type":"Answer","text":"Hallucination detection methods: (1) Consistency checking — ask the same question multiple ways and compare answers. (2) Reference grounding — check if claims are supported by a provided context document. (3) Confidence signals — hedging phrases like 'I believe', 'I think', 'might be' indicate uncertainty. (4) Named entity verification — check if cited names, dates, and figures are verifiable. (5) Contradiction detection — check if the response contradicts the prompt or prior context. Tools like DeepEval and G-Eval use LLM-as-judge for reference-based hallucination scoring."}},{"@type":"Question","name":"What is the difference between toxicity and bias in LLM evaluation?","acceptedAnswer":{"@type":"Answer","text":"Toxicity measures harmful, offensive, or dangerous content in the LLM output — hate speech, threats, profanity, violent content. Bias measures unfair differential treatment of groups — demographic stereotyping, unequal representation, or discriminatory patterns. A response can be biased without being toxic (e.g. consistently associating certain groups with negative traits in neutral phrasing) or toxic without being biased (e.g. universally offensive content targeting all groups)."}},{"@type":"Question","name":"What are LLM evaluation templates used for?","acceptedAnswer":{"@type":"Answer","text":"LLM evaluation templates provide pre-built rubrics and scoring criteria for assessing AI outputs without manual configuration. Common evaluation templates cover hallucination detection (factual accuracy), toxicity assessment (harmful content), correctness scoring (task completion), and bias evaluation (group fairness). Templates accelerate LLM safety testing and standardize metrics across different evaluations, making them essential for teams auditing AI responses at scale."}},{"@type":"Question","name":"Is there a free DeepEval alternative that works in the browser?","acceptedAnswer":{"@type":"Answer","text":"Yes. This tool provides a browser-based DeepEval alternative with no installation required — just paste your prompt and LLM response to evaluate hallucination, toxicity, correctness, and bias instantly. It's free, no login needed, and uses built-in templates similar to DeepEval's LLM-as-judge approach, making it ideal for quick AI safety evaluations without Python setup or API costs."}}]}
 </script>
 
 </head>
@@ -781,8 +781,8 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--text-dim); ma
       </div>
     </div>
 
-
 <!-- TEMPLATE SELECTOR -->
+
 <div class="template-row">
   <span style="font-family:var(--mono);font-size:10px;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.07em;align-self:center;margin-right:4px;">Template:</span>
   <button class="tpl-btn active" id="tpl-hallucination" onclick="selectTemplate('hallucination')">Hallucination</button>
@@ -819,7 +819,6 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--text-dim); ma
   <span style="font-family:var(--mono);font-size:11px;color:var(--text-dim);margin-left:4px;" id="tplLabel">Template: Hallucination</span>
 </div>
 
-
   </div>
 
   <hr class="divider">
@@ -832,8 +831,7 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--text-dim); ma
       <span class="sec-rule"></span>
     </div>
 
-
-<p>These are the most widely used tools for testing safety and toxicity of LLM outputs in 2025-2026, covering open source libraries, managed APIs, and evaluation frameworks.</p>
+<p>These are the most widely used tools for testing safety and toxicity of LLM outputs in 2025-2026, covering open source libraries, managed APIs, and evaluation frameworks with built-in templates for AI safety assessment.</p>
 
 <div class="tools-table">
   <div class="tt-row tt-head">
@@ -845,7 +843,7 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--text-dim); ma
   </div>
   <div class="tt-row">
     <div class="tt-cell" style="color:#fff;font-weight:600;">This tool</div>
-    <div class="tt-cell">Browser · No install · Templates</div>
+    <div class="tt-cell">Browser · No install · Evaluation templates</div>
     <div class="tt-cell"><span class="badge b-yes">Yes</span></div>
     <div class="tt-cell"><span class="badge b-yes">Yes</span></div>
     <div class="tt-cell"><span class="badge b-yes">Yes</span></div>
@@ -894,7 +892,6 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--text-dim); ma
   </div>
 </div>
 
-
   </section>
 
   <!-- EVALUATION DIMENSIONS -->
@@ -905,20 +902,18 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--text-dim); ma
       <span class="sec-rule"></span>
     </div>
     <div class="dense-block">
-      <p><strong>Hallucination</strong><br>
-      Hallucination occurs when an LLM generates content that is factually incorrect, fabricated, or not grounded in the provided context. Key signals: specific named entities (people, dates, figures) that are unverifiable, confident claims about niche topics, internal contradictions between different parts of the response, and mismatch between the prompt's context document and the response's claims. Hedging language (<code>I believe</code>, <code>might be</code>, <code>I think</code>) is a positive signal — it indicates the model is acknowledging uncertainty rather than hallucinating confidently.</p>
+      <p><strong>Hallucination Detection in AI Safety</strong><br>
+      Hallucination occurs when an LLM generates content that is factually incorrect, fabricated, or not grounded in the provided context. Key signals: specific named entities (people, dates, figures) that are unverifiable, confident claims about niche topics, internal contradictions between different parts of the response, and mismatch between the prompt's context document and the response's claims. Hedging language (<code>I believe</code>, <code>might be</code>, <code>I think</code>) is a positive signal — it indicates the model is acknowledging uncertainty rather than hallucinating confidently. Using <code>hallucination detection ai</code> tools helps identify these patterns at scale.
 
-
-  <p><strong>Toxicity</strong><br>
+  <p><strong>Toxicity Assessment</strong><br>
   Toxicity covers harmful, offensive, or dangerous output: hate speech targeting protected groups, threats or incitement to violence, sexual content including minors, detailed instructions for illegal activities, and harassment. Modern LLMs have strong safety training but can be bypassed by jailbreaks, roleplay framing, or indirect elicitation. Toxicity testing should cover direct prompts AND adversarial/indirect framings. Azure AI Content Safety and AWS Bedrock Guardrails are the main managed APIs for production-grade toxicity filtering.</p>
 
-  <p><strong>Correctness</strong><br>
+  <p><strong>Correctness Evaluation</strong><br>
   Correctness evaluates factual accuracy and task completion quality. For code generation: does the code run and produce the expected output? For factual Q&amp;A: are claims verifiable? For summarization: does the summary capture key information without distortion? Correctness evaluation typically requires a reference answer or ground truth. G-Eval and LLM-as-judge approaches use a scoring model to compare the output against a reference without exact string matching.</p>
 
-  <p><strong>Bias</strong><br>
+  <p><strong>Bias Detection in LLM Outputs</strong><br>
   Bias in LLM outputs includes demographic stereotyping (associating groups with negative traits), differential advice quality based on names or demographic markers in prompts, underrepresentation or erasure, and unfair sentiment polarity across groups. Bias evaluation requires counterfactual testing — running the same prompt with different demographic markers and comparing responses. DeepEval and Giskard include bias detectors that run multiple prompt variants automatically.</p>
 </div>
-
 
   </section>
 
@@ -938,11 +933,19 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--text-dim); ma
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">What templates should an LLM evaluation tool have?<span class="faq-arrow">&#9660;</span></button>
-        <div class="faq-a">A complete LLM evaluator should include: <strong>Hallucination</strong> (factual accuracy, grounding score), <strong>Toxicity</strong> (harmful content categories), <strong>Correctness</strong> (task completion, accuracy vs reference), <strong>Bias</strong> (demographic differential treatment), <strong>Coherence</strong> (logical consistency, fluency), <strong>Relevance</strong> (answer-to-question alignment), and <strong>Safety</strong> (jailbreak resistance, PII leakage). This tool covers the first four with built-in templates.</div>
+        <div class="faq-a">A complete LLM evaluator should include: <strong>Hallucination</strong> (factual accuracy, grounding score), <strong>Toxicity</strong> (harmful content categories), <strong>Correctness</strong> (task completion, accuracy vs reference), <strong>Bias</strong> (demographic differential treatment), <strong>Coherence</strong> (logical consistency, fluency), <strong>Relevance</strong> (answer-to-question alignment), and <strong>Safety</strong> (jailbreak resistance, PII leakage). Built-in templates for each dimension accelerate evaluation without manual prompt engineering.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">What is LLM-as-judge evaluation?<span class="faq-arrow">&#9660;</span></button>
         <div class="faq-a">LLM-as-judge uses a powerful model (usually GPT-4, Claude 3.5 Sonnet, or Gemini Pro) to evaluate the outputs of a smaller or different model. The judge model receives a scoring prompt with criteria (hallucination, toxicity, relevance) and rates the output on a 1-5 or 0-1 scale. Advantages: handles nuanced quality judgments without exact reference matching. Disadvantages: introduces bias from the judge model's own preferences, and is expensive at scale. Tools like DeepEval, Arize, and G-Eval implement this pattern. The judge model must be more capable than the model being evaluated.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What are LLM evaluation templates used for?<span class="faq-arrow">&#9660;</span></button>
+        <div class="faq-a">LLM evaluation templates provide pre-built rubrics and scoring criteria for assessing AI outputs without manual configuration. Common templates cover hallucination detection (factual accuracy), toxicity assessment (harmful content), correctness scoring (task completion), and bias evaluation (group fairness). Templates accelerate LLM safety testing and standardize metrics across different evaluations, making them essential for teams auditing AI responses at scale.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Is there a free DeepEval alternative that works in the browser?<span class="faq-arrow">&#9660;</span></button>
+        <div class="faq-a">Yes. This tool provides a browser-based DeepEval alternative with no installation required — just paste your prompt and LLM response to evaluate hallucination, toxicity, correctness, and bias instantly. It's free, no login needed, and uses built-in evaluation templates similar to DeepEval's LLM-as-judge approach, making it ideal for quick AI safety evaluations without Python setup or API costs.</div>
       </div>
     </div>
   </section>
@@ -970,9 +973,11 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--text-dim); ma
     <span class="tag">llm evaluation templates</span>
     <span class="tag">llm bias detection</span>
     <span class="tag">ai output evaluator</span>
+    <span class="tag">ai safety evaluation tools</span>
     <span class="tag">llm safety testing</span>
     <span class="tag">llm correctness evaluation</span>
     <span class="tag">deepeval alternative browser</span>
+    <span class="tag">hallucination detection ai</span>
     <span class="tag">llm output quality score</span>
   </div>
 
